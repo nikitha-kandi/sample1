@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+h1{ 
+background-color : white; 
+}
+.container{
+padding:20px;
+width:300px;
+background-color:white;
+}
+input[type="text"], input[type="password"] {
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="submit"] {
+            padding: 10px;
+            background-color: blue;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: darkblue;
+        }
+body{
+color:blue;
+background-color:pink;
+}
+</style>
+<script>
+function validate() {
+        var uname = f1.username.value;
+        if (uname.length<=0)
+        {
+            alert("Please Enter UserName");
+            return false;
+           
+        }
+        if (uname.length < 8)
+        {
+            alert("Please enter UserName not less than 8");
+            return false;
+        }
+        var pwd = f1.password.value;
+        if (pwd.length<=0)
+        {
+            alert("Please Enter password");
+             return false;
+        }
+        if (pwd.length < 6)
+        {
+            alert("Please enter Password not less than 6");
+             return false;
+        }
+return true;
+}
+</script>
+<body>
+<center>
+<h1>REGISTRATION FORM</h1>
+<form name="f1">
+<div class="container">
+
+<label for="username"><b>Name:</b></label>
+<input type ="text" placeholder="enter name" id="username"> <br><br>
+<label for="password"><b>Password:</b></label>
+<input type ="password" placeholder="enter password" id="password"> <br><br>
+<label><b>Email:</b></label>
+<input type ="text" placeholder="enter email"> <br><br>
+<label><b>Phone number:</b></label>
+<input type ="text" placeholder="enter phone number"> <br><br>
+
+<center><input type="submit" value="Submit" hspace="30" onclick="validate()"></center>
+</div>
+</form>
+</center>
+</body>
+</html>
+
